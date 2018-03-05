@@ -1,0 +1,32 @@
+{
+  "name": "webpack4test",
+  "version": "1.0.0",
+  "description": "Isomorphic web app with webpack 4",
+  "scripts": {
+    "client:dev": "webpack --config webpack.config.client.js --mode development",
+    "client:build": "webpack --config webpack.config.client.js --mode production",
+    "server:dev": "webpack --config webpack.config.server.js --mode development",
+    "server:build": "webpack --config webpack.config.server.js --mode production",
+    "dev": "npm run client:dev && npm run server:dev",
+    "build": "rm -rf build/ && npm run client:build && npm run server:build"
+  },
+  "keywords": [
+    "webpack",
+    "isomorphic",
+    "express"
+  ],
+  "author": "element364",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.2",
+    "express": "^4.16.2",
+    "history": "^4.7.2",
+    "universal-router": "^6.0.0"
+  },
+  "devDependencies": {
+    "assets-webpack-plugin": "^3.5.1",
+    "webpack": "^4.1.0",
+    "webpack-bundle-analyzer": "^2.11.1",
+    "webpack-cli": "^2.0.10"
+  }
+}
