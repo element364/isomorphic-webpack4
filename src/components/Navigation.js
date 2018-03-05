@@ -1,8 +1,10 @@
+import Link from 'components/Link';
+
 const Navigation = () => `
     <div>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contacts">Contacts</a>
+        ${Link({ to: '/', children: 'Home' })}
+        ${Link({ to: '/about', children: 'About' })}
+        ${Link({ to: '/contacts', children: 'Contacts' })}
     </div>
 `;
 

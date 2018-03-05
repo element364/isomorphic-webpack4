@@ -7,7 +7,10 @@ const serverConfig = {
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'server.js'
-    }
+    },
+    resolve: {
+        modules: ['node_modules', 'src']
+    },
 };
 
 module.exports = serverConfig;

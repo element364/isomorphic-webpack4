@@ -1,7 +1,7 @@
 import express from 'express';
 import compression from 'compression';
+import Html from 'components/Html';
 import router from './router';
-import Html from './components/Html';
 import assets from '../build/assets.json';
 
 const

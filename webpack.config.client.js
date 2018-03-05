@@ -13,6 +13,9 @@ const clientConfig = {
         chunkFilename: '[name].chunk.js',
         filename: '[name].js'
     },
+    resolve: {
+        modules: ['node_modules', 'src']
+    },
     plugins: [
         new AssetsPlugin({
             path: path.resolve(__dirname, 'build'),
