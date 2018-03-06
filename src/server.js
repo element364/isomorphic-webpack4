@@ -25,6 +25,7 @@ server.get('*', async(req, res) => {
         ...route,
         scripts: [
             assets.vendor.js,
+            assets.common.js,
             assets.client.js,
             ...route.chunks.map(chunk => assets[chunk].js)
         ]

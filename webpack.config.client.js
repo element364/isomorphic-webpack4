@@ -22,16 +22,22 @@ const clientConfig = {
             filename: 'assets.json',
             prettyPrint: true,
         }),
+
         ...isAnalyze ? [new BundleAnalyzerPlugin({ analyzerMode: 'static' })] : []
     ],
     optimization: {
-        runtimeChunk: false,
         splitChunks: {
             cacheGroups: {
-                commons: {
+                vendor: {
                     test: /[\\/]node_modules[\\/]/,
                     name: 'vendor',
                     chunks: 'all'
+                },
+                commons: {
+                    name: 'common',
+                    chunks: 'all',
+                    minChunks: 2,
+                    enforce: true
                 }
             }
         }

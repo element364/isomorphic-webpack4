@@ -5,6 +5,7 @@ const container = document.getElementById('app');
 const history = createBrowserHistory();
 
 history.listen(async(location, action) => {
+    console.log('Listen');
     const route = await router.resolve({
         pathname: location.pathname,
         query: location.search
@@ -18,6 +19,8 @@ history.listen(async(location, action) => {
 
     document.title = route.title;
 });
+
+console.log('Adding handler');
 
 document.body.addEventListener('click', e => {
     if (e.target.matches('a')) {
