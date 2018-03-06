@@ -7,8 +7,8 @@
     "client:build": "webpack --config webpack.config.client.js --mode production",
     "server:dev": "webpack --config webpack.config.server.js --mode development",
     "server:build": "webpack --config webpack.config.server.js --mode production",
-    "dev": "npm run client:dev && npm run server:dev",
-    "build": "rm -rf build/* && npm run client:build && npm run server:build"
+    "dev": "rm -r build/* ; npm run client:dev && npm run server:dev",
+    "build": "rm -r build/* ; npm run client:build && npm run server:build"
   },
   "keywords": [
     "webpack",
